@@ -1,0 +1,41 @@
+name: Rebuild Power Platform KB
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 2 * * *'   # каждый день в 02:15 UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout export repo
+        uses: actions/checkout@v4
+
+      - name: Clone official Microsoft docs repos
+        run: |
+          mkdir -p src
+          git clone --depth 1 https://github.com/MicrosoftDocs/power-platform.git src/power-platform
+          git clone --depth 1 https://github.com/MicrosoftDocs/powerapps-docs.git src/powerapps-docs
+          git clone --depth 1 https://github.com/MicrosoftDocs/power-automate-docs.git src/power-automate-docs
+          git clone --depth 1 https://github.com/MicrosoftDocs/powerbi-docs.git src/powerbi-docs
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build exports
+        run: python scripts/build_kb.py
+
+      - name: Commit updated exports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exports/
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh knowledge exports"
+          git push
