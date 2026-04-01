@@ -22817,7 +22817,7 @@ You can check the related system job in the Dataverse web application and look f
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 11/18/2025
+ms.date: 03/30/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -22891,7 +22891,7 @@ Search has a native endpoint and there are Dataverse messages that you can use f
 
 The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses the Dataverse Tabular Data Stream (TDS) endpoint to retrieve data using [Dataverse SQL](how-dataverse-sql-differs-from-transact-sql.md), a subset of Transact-SQL.
 
-[Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio-preview) is a preview feature.
+[Retrieving data using SQL Management Studio (SSMS)](dataverse-sql-query.md#sql-server-management-studio) is a preview feature.
 
 [Learn to use SQL to query data](dataverse-sql-query.md)
 
@@ -22914,7 +22914,7 @@ The deprecated SOAP endpoint payloads use serialized XML data that is much more 
 ---
 title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." 
-ms.date: 04/06/2022
+ms.date: 03/31/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -22925,25 +22925,23 @@ contributors:
 ---
 # Debug Workflow Activities
 
-
-
-Because custom workflow extensions are .NET Framework assemblies you can debug them using methods very similar to how you debug plug-ins. 
+Because custom workflow extensions are .NET Framework assemblies, you can debug them using methods similar to how you debug plug-ins.
 
 ## Use the Plug-in Registration Tool
 
 The Plug-in Registration Tool (PRT) is one of the tools you can download from NuGet. More information: [Dataverse development tools](../download-tools-nuget.md).
 
-Once you have downloaded the PRT, click the `PluginRegistration.exe` to run it.
+Once you download the PRT, select the `PluginRegistration.exe` to run it.
 
 ## Install Profiler
 
-From the PRT you can install the Plug-in profiler solution by clicking the **Install Profiler** button.
+From the PRT, you can install the Plug-in profiler solution by clicking the **Install Profiler** button.
 
-![The install profiler button in the plug-in registration tool.](../media/tutorial-debug-plug-in-install-profiler.md.png)
+![The install profiler button in the plug-in registration tool.](../media/tutorial-debug-plug-in-install-profiler.png)
 
-This solution add the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
+This solution adds the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
 
-When the **Plug-in profiler** is installed for your Microsoft Dataverse instance, you will see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
+When the **Plug-in profiler** is installed for your Microsoft Dataverse instance, you'll see it in the PRT at the bottom of the list of **Registered Plugins & Custom Workflow Activities**.
 
 ![Plug-in Profiler in the Plug-in Registration Tool.](media/Plug-in-Profiler.png)
 
@@ -22953,7 +22951,7 @@ To profile a workflow activity, right-click on the **Plug-in Profiler** and sele
 
 ![Start Profiling Workflow.](media/Start-profiling-workflow.png)
 
-This will open the **Profiler Settings** dialog which will provide the following options:
+The **Profiler Settings** dialog that provides the following options:
 
 ![profiler settings dialog.](media/profiler-settings.png)
 
@@ -22962,46 +22960,46 @@ This will open the **Profiler Settings** dialog which will provide the following
 |**Workflow**|Select the Workflow that contains the workflow activity you want to debug.|
 |**Steps**|Select the specific steps within that workflow that you want to debug.|
 |**Specify profile storage**|We recommend that you choose **Persist to Entity**.|
-|**Set profiler settings**|If your are working with a system where the workflow is being executed frequently, you can reduce performance impact by choosing to limit the number of profiles that are captured.|
+|**Set profiler settings**|If you are working with a system where the workflow is being executed frequently, you can reduce performance impact by choosing to limit the number of profiles that are captured.|
 |**Include secure configuration**|This provides the option to avoid seeing potentially sensitive data that may be passed as secure configuration.|
 
-Click **OK** to save your settings.
+Select **OK** to save your settings.
 
 > [!NOTE]
-> At the time of this writing you may see the following error:
-> 
+> At the time of this writing, you may see the following error:
+>
 > ![Error when setting workflow activity profiler settings.](media/error-setting-profiler-settings-workflow-activity.png)
-> 
-> The details of this error will include the message: `Automatic workflow cannot be published if no activation parameters have been specified.`
-> 
-> The profile settings are successfully saved. This error occurs because the process of profiling a custom workflow activity will create a copy of the workflow and will disable both the original workflow and the copy. You will need to re-configure the profiled copy and activate it to capture a profile.  See the following steps for more information.
+>
+> The details of this error include the message: `Automatic workflow cannot be published if no activation parameters have been specified.`
+>
+> The profile settings are successfully saved. This error occurs because the process of profiling a custom workflow activity creates a copy of the workflow and disables both the original workflow and the copy. You'll need to reconfigure the profiled copy and activate it to capture a profile. For more information, see the following steps.
 
 ## Capture a profile
 
-When a profile for workflow containing a custom workflow activity is configured, a copy of the original workflow is created and it will have the text `(Profiled)` appended to the name. Both the original and the copy of the workflows are deactivated.
+When a profile for workflow containing a custom workflow activity is configured, a copy of the original workflow is created and it has the text `(Profiled)` appended to the name. Both the original and the copy of the workflows are deactivated.
 
 > [!NOTE]
-> Unless you are working in the system **Default** solution, you may not see the copied workflow because it is added to that solution. To view the copied workflow in the solution you are working in, you need to click **Add Existing** and add this copy to your solution.
+> Unless you're working in the system **Default** solution, you may not see the copied workflow because it's added to that solution. To view the copied workflow in the solution you're working in, you need to select **Add Existing** and add this copy to your solution.
 
 The deactivated workflows should look like this:
 
 ![Copied workflow in solution explorer.](media/copied-workflow-solution-explorer.png)
 
-When the workflow is copied, some of the configuration is lost. If you try to activate the copied workflow, you will get the following error: `An automatic process cannot be activated if no activation parameters have been specified. Add activation parameters, and then activate. ...`
+When the workflow is copied, some of the configuration is lost. If you try to activate the copied workflow, you'll get the following error: `An automatic process cannot be activated if no activation parameters have been specified. Add activation parameters, and then activate. ...`
 
-This means you have to re-configure the **Start when** properties of the workflow. In this case, we want to set the workflow to start when the **Account Name** field changes:
+This means you have to reconfigure the **Start when** properties of the workflow. In this case, we want to set the workflow to start when the **Account Name** field changes:
 
 ![Start when field changes setting.](media/start-when-field-changes.png)
 
-Click the **Select** button to choose the **Account Name** field.
+Select the **Select** button to choose the **Account Name** field.
 
 ![Start when field changes setting field select dialog.](media/start-when-field-change-field-select-dialog.png)
 
-The copied profile workflow will also be changed to a background (asynchronous) workflow. It will be easier to test a real-time (synchronous) workflow, so in the menu bar click **Convert to a real-time workflow**.
+The copied profile workflow is changed to a background (asynchronous) workflow. It is easier to test a real-time (synchronous) workflow, so in the menu bar select **Convert to a real-time workflow**.
 
 Save the copied profile workflow and activate it.
 
-In an app connected to your Dataverse instance, or by using the web services, update the **Account Name** value of an account entity. This will capture an instance of the context passed to your custom workflow activity and persist it as a profile record in the system.
+In an app connected to your Dataverse instance, or by using the web services, update the **Account Name** value of an account entity. This change initiates capture of the context instance passed to your custom workflow activity and persist it as a profile record in the system.
 
 > [!TIP]
 > If your workflow is asynchronous, make sure that it completes before moving on to the next step. Go to Settings > System Jobs and verify that the workflow succeeded.
@@ -23014,30 +23012,30 @@ To stop profiling, unregister the workflow using the PRT.
 
 ![Stop profiling workflow.](media/stop-profiling.png)
 
-This will delete the copy of the workflow that was made.
+This deletes the copy of the workflow that was made.
 
 > [!IMPORTANT]
-> The workflow that was copied will still be deactivated. You will need to manually reactivate it if you want it to be applied.
+> The workflow that was copied will still be deactivated. You'll need to manually reactivate it if you want it to be applied.
 
 ## Debug your assembly
 
-1. In the PRT, click **Replay Plug-in execution**.
-1. In the **Replay Plug-in Execution dialog**, on the **Setup** tab, click the download button to select a **Profile**.
+1. In the PRT, select **Replay Plug-in execution**.
+1. In the **Replay Plug-in Execution dialog**, on the **Setup** tab, select the download button to select a **Profile**.
 
     ![Replay Plug-in Execution dialog.](media/replay-plugin-execution-dialog.png)
 
     > [!NOTE]
-    > The **Unsecure Configuration**, **Secure Configuration**, and **Settings** tabs are not used for workflow activity debugging. They are only used for Plug-ins.
+    > The **Unsecure Configuration**, **Secure Configuration**, and **Settings** tabs aren't used for workflow activity debugging. They're only used for Plug-ins.
 
-1. In the **Select Profile from CRM** dialog, choose the most recent profile that represents the one you just generated.
+1. In the **Select Profile from CRM** dialog, choose the most recent profile that represents the one you generated.
 
     ![Select the profile you just generated.](media/select-profile-from-crm-dialog.png)
 
     > [!NOTE]
     > You can manage captured profiles in the **Dynamics 365 - custom** web application by navigating to **Settings** > **Extensions** > **Plug-in Profiles**.
 
-1. Click **Select** to close the dialog.
-1. In the **Assembly Location** field, click the ellipses (**...**) button to add the location of the assembly that contains the workflow activity you are debugging.
+1. Select **Select** to close the dialog.
+1. In the **Assembly Location** field, select the ellipses (**...**) button to add the location of the assembly that contains the workflow activity you're debugging.
 1. Open your Workflow Activity project in Visual Studio.
 1. Add a breakpoint to a line within the `Execute` method of your workflow activity.
 
@@ -23047,22 +23045,19 @@ This will delete the copy of the workflow that was made.
 1. Look for the process for `PluginRegistration.exe`.
 
     > [!TIP]
-    > The search filter will help you find this faster. The Process Id (PID) assigned to the process will be different for each session. The PID is shown in the **Replay Plug-in Execution** dialog under **Plug-in Traces**.
+    > The search filter helps you find this faster. The Process ID (PID) assigned to the process is different for each session. The PID is shown in the **Replay Plug-in Execution** dialog under **Plug-in Traces**.
 
     ![Visual Studio attach to process dialog.](media/visual-studio-attach-to-process-dialog.png)
 
-1. Click **Attach** to attach your Visual Studio debugger to the PRT application that will run the process replay.
-1. In the PRT **Replay Plug-in Execution** dialog, click the **Start Execution** button.
+1. Select **Attach** to attach your Visual Studio debugger to the PRT application that is to run the process replay.
+1. In the PRT **Replay Plug-in Execution** dialog, select the **Start Execution** button.
 
 You should now be able to step through your code and debug your workflow activity using Visual Studio.
-
-
 
 ### More information
 
 [Debug Plug-ins](../debug-plug-in.md)<br />
 [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
 
@@ -25442,9 +25437,9 @@ This sample will generate a number of account table rows using the <xref:System.
 ## FILE: src/powerapps-docs/powerapps-docs/developer/data-platform/xrm-tooling/use-connection-strings-xrm-tooling-connect.md
 
 ---
-title: "Use connection strings in XRM tooling to connect to Microsoft Dataverse (Dataverse)| Microsoft Docs"
-description: "XRM tooling enables you to connect to your Microsoft Dataverse environment by using connection strings"
-ms.date: 12/04/2024
+title: "Use XRM Tooling Connection Strings for Dataverse"
+description: "Learn how to use XRM tooling connection strings in an app configuration to connect to Dataverse securely."
+ms.date: 03/31/2026
 author: MattB-msft
 ms.author: mbarbour
 ms.reviewer: pehecke
@@ -25457,7 +25452,7 @@ contributors:
 ---
 # Use connection strings in XRM tooling to connect to Microsoft Dataverse
 
-With Dataverse, XRM tooling enables you to connect to your Dataverse environment by using connection strings. This is similar to the concept of connection strings used with **SQL Server**. Connection strings have native support in configuration files, including the ability to encrypt the configuration sections for maximum security. This enables you to configure Dataverse connections at deployment time, and not hard code in your application to connect to your Dataverse environment.  
+XRM tooling enables you to connect to your Dataverse environment by using connection strings. This approach is similar to the concept of connection strings used with **SQL Server**. Configuration files natively support connection strings, including the ability to encrypt the configuration sections for maximum security. This feature enables you to configure Dataverse connections at deployment time, and not hard code them in your application.
 
 Read the following important information about using a connection string in application code.
 [!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
@@ -25466,7 +25461,7 @@ Read the following important information about using a connection string in appl
 
 ## Create a connection string
 
- You specify the connection string in the `app.config` or `web.config` file for your project, as shown in the following example.  
+ Specify the connection string in the `app.config` or `web.config` file for your project, as shown in the following example.  
   
 ```xml  
 <connectionStrings>  
@@ -25475,9 +25470,9 @@ Read the following important information about using a connection string in appl
 ```  
   
 > [!IMPORTANT]
-> If you add any sensitive information to the `app.config` or `web.config file`, for example an account password, be sure to take appropriate security precautions to protect the information.  
+> If you add any sensitive information to the `app.config` or `web.config file`, such as an account password, take appropriate security precautions to protect the information.  
   
- After creating the connection string, you use it to create a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object.  
+ After creating the connection string, use it to create a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> object.  
   
 ```csharp  
 //Use the connection string named "MyCDSServer"  
@@ -25485,22 +25480,22 @@ Read the following important information about using a connection string in appl
 CrmServiceClient svc = new CrmServiceClient(ConnectionString);  
 ```
 
-Alternately, you could use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class.
+Alternatively, you can use the <xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient> class.
 
 ```csharp
 ServiceClient svc = new ServiceClient(ConnectionString);  
 ```
   
 > [!NOTE]
-> You'll have to use the following `using` directive in your code to reference the `System.Configuration` namespace to access the connection string in your code: `using System.Configuration;`  
+> To access the connection string in your code, include the following `using` directive to reference the `System.Configuration` namespace: `using System.Configuration;`  
   
- After creating a service client object, you can use the object to perform actions in Dataverse. More information: [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md)  
+ After creating a service client object, use the object to perform actions in Dataverse. For more information, see [Use XRM Tooling to execute actions in Dataverse](use-xrm-tooling-execute-actions.md).  
   
 <a name="Parameters"></a>
 
 ## Connection string parameters
 
- The connection string contains a series of name=value pair separated by semi colons. The following table lists supported parameters, which can be entered in any order.  
+ The connection string contains a series of name=value pairs separated by semicolons. The following table lists supported parameters, which you can enter in any order.  
   
 |Parameter name|Description|  
 |--------------------|-----------------|  
@@ -25508,21 +25503,21 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 |`UserName`, `User Name`, `UserId`, or `User Id`|Specifies the user's identification name associated with the credentials.|  
 |`Password`|Specifies the password for the user name associated with the credentials.|  
 |`HomeRealmUri` or `Home Realm Uri`|Specifies the Home Realm Uri.|  
-|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret` and `Office365` are permitted values for Dataverse environments.<br/><br/>**NOTE**: `Office365` authentication type is deprecated, and we recommend to use `OAuth` as the preferred authentication type. More information: [What should I do to fix my application code if affected?](/powerapps/developer/data-platform/authenticate-office365-deprecation#what-should-i-do-to-fix-my-application-code-if-affected)|  
-|`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. If set to `true`, will force the system to create a unique connection. If set to `false` the existing connection can be reused.|  
+|`AuthenticationType` or `AuthType`|Specifies the authentication type to connect to Dataverse environment. Valid values are: `AD`, `IFD` (AD FS enabled), `OAuth`, `Certificate`, `ClientSecret`, or `Office365`. However,  only `OAuth`, `Certificate`, `ClientSecret`, and `Office365` are permitted values for Dataverse environments.<br/><br/>**NOTE**: `Office365` authentication type is deprecated, and we recommend using `OAuth` as the preferred authentication type. For more information, see [What should I do to fix my application code if affected?](/powerapps/developer/data-platform/authenticate-office365-deprecation#what-should-i-do-to-fix-my-application-code-if-affected)|  
+|`RequireNewInstance`|Specifies whether to reuse an existing connection if recalled while the connection is still active. If set to `true`, the system creates a unique connection. If set to `false`, the existing connection can be reused.|  
 |`ClientId`, `AppId` or `ApplicationId`|Specifies the `ClientID` assigned when you registered your application in Microsoft Entra ID or Active Directory Federation Services (AD FS).|
 |`ClientSecret` or `Secret` |Required when Auth Type is set to `ClientSecret`. Client Secret string to use for authentication.|
 |`RedirectUri` or `ReplyUrl`|Specifies the redirect URI of the application you registered in Microsoft Entra ID or Active Directory Federation Services (AD FS).<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
-|`TokenCacheStorePath`|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It is the processes responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
-|`LoginPrompt`|Specifies whether the user is prompted for credentials if the credentials are not supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Does not prompt the user to specify credentials. If using a connection method does not have a user interface, you should use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
-|`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
-|`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
-|`Integrated Security`|Specifies to use current windows credentials to attempt to create a token for the instances. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.1.0.21|
+|`TokenCacheStorePath`|Specifies the full path to the location where the user token cache should be stored. The running process should have access to the specified path. It's the process's responsibility to set and configure this path.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
+|`LoginPrompt`|Specifies whether the user is prompted for credentials if the credentials aren't supplied. Valid values are:<br /><br /> -   `Always`: Always prompts the user to specify credentials.<br />-   `Auto`: Allows the user to select in the login control interface whether to display the prompt or not.<br />-   `Never`: Doesn't prompt the user to specify credentials. If using a connection method that doesn't have a user interface, use this value.<br /><br /> This parameter is applicable only when the authentication type is specified as `OAuth`.|  
+|`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, `Thumbprint` is required.|
+|`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, `AppID` is required and `UserID` and `Password` values are ignored.|
+|`Integrated Security`|Specifies to use current Windows credentials to attempt to create a token for the instances. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.1.0.21|
 
 > [!NOTE]
 > <b>When using the `OAuth` AuthType\AuthenticationType</b><br/>
-> For development and prototyping purposes we have provided the following AppId or ClientId and Redirect URI for use in OAuth Flows.<br/>
-> For production use, you should create an AppId or ClientId that is specific to your tenant in the Azure Management portal.<br/>
+> For development and prototyping purposes, the following AppId or ClientId and Redirect URI are provided for use in OAuth Flows.<br/>
+> For production use, create an AppId or ClientId that is specific to your tenant in the Azure Management portal.<br/>
 > Sample AppId or ClientId = 51f81489-12ee-4a9e-aaae-a2591f45987d<br/>
 > Sample RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97<br/>
 
@@ -25530,14 +25525,14 @@ ServiceClient svc = new ServiceClient(ConnectionString);
 
 ## Connection string examples
 
-The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect)
+The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. For connection string examples of on-premises and IFD deployment instances, see [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect).
 
 ### Named account using Office365  
 
 Create a new connection to Dataverse using a UserName or Password via Office365.
 
 > [!NOTE]
-> This `AuthType` is deprecated and we recommend to use `OAuth` as the preferred authentication type. More information: [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse)
+> This `AuthType` is deprecated. Use `OAuth` as the preferred authentication type. For more information, see [Authenticate using Office365](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse).
 
 ```xml
 <add name="MyCDSServer" 
@@ -25573,7 +25568,7 @@ Create a new connection to Dataverse using a UserID or Password via OAuth.
 Create a new connection to Dataverse using the current logged in user via OAuth.
 
 > [!NOTE]
-> OAuth is the preferred auth type for connecting to Dataverse when using a interactive flow. This auth type fully supports the features of Microsoft Entra ID Conditional Access and Multi-Factor authentication.
+> OAuth is the preferred auth type for connecting to Dataverse when using an interactive flow. This auth type fully supports the features of Microsoft Entra ID Conditional Access and Multi-Factor authentication.
 
 ```xml
 <add name="MyCDSServer"
@@ -25590,7 +25585,7 @@ Create a new connection to Dataverse using the current logged in user via OAuth.
 
 ### Certificate based authentication
 
-Create a new connection to Dataverse using a Application or Client Id and a Certificate.
+Create a new connection to Dataverse by using an application or client ID and a certificate.
 
 ```xml
 <add name="MyCDSServer" 
@@ -25604,7 +25599,7 @@ Create a new connection to Dataverse using a Application or Client Id and a Cert
 
 ### ClientId or Client Secret based authentication
 
-Create a new connection to Dataverse using a Application or Client Id and a Client Secret.
+Create a new connection to Dataverse by using an application or client ID and a client secret.
 
 ```xml
 <add name="MyCDSServer" 
@@ -25620,7 +25615,7 @@ Create a new connection to Dataverse using a Application or Client Id and a Clie
 
 ## Determine your connection status
 
- To determine if the connection request was successful, check the value of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.IsReady> property. If **true**, the connection is successful, and you are ready to work. Otherwise, check the values of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmError> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmException> properties for the cause of the connection failure.  
+ To determine if the connection request was successful, check the value of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.IsReady> property. If **true**, the connection is successful, and you're ready to work. Otherwise, check the values of the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmError> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmException> properties for the cause of the connection failure.  
   
 ### See also
 
