@@ -32550,22 +32550,21 @@ In the case of the value for `record`, YAML considers `a:` and `b:` to be anothe
 ## FILE: src/power-platform/power-platform/test-engine/ai-authoring.md
 
 ---
-title: AI-assisted test authoring with GitHub Copilot (preview)
+title: AI-assisted test authoring with GitHub Copilot (deprecated)
 description: Learn how to use GitHub Copilot and AI tools to author tests for Power Platform applications
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# AI-assisted test authoring with GitHub Copilot (preview)
+# AI-assisted test authoring with GitHub Copilot (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Creating comprehensive test plans for Power Platform applications can be time-consuming, especially for complex scenarios. AI-assisted authoring tools like GitHub Copilot can significantly accelerate this process by generating test templates, suggesting test cases, and automating boilerplate code creation.
 
@@ -32906,22 +32905,21 @@ If GitHub Copilot generates tests that don't meet your needs:
 ## FILE: src/power-platform/power-platform/test-engine/ai-evaluation.md
 
 ---
-title: Testing nondeterministic AI in Power Apps (preview)
+title: Testing nondeterministic AI in Power Apps (deprecated)
 description: Learn how to test AI components and verify nondeterministic outputs in Power Platform applications
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
  - grant-archibald-ms
 ---
 
-# Testing nondeterministic AI in Power Apps (preview)
+# Testing nondeterministic AI in Power Apps (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Testing AI-powered applications introduces unique challenges because AI outputs can vary between runs, even with identical inputs. This nondeterministic behavior requires special testing approaches. This guide explains how to validate AI components in your Power Platform applications effectively.
 
@@ -33134,12 +33132,12 @@ TestFormProcessing(FormType: Text): TestResult =
 ## FILE: src/power-platform/power-platform/test-engine/ai-mcp.md
 
 ---
-title: Model Context Protocol in Test Engine (preview)
+title: Model Context Protocol in Test Engine (deprecated)
 description: Learn how to use the Model Context Protocol (MCP) server implementation in Power Apps Test Engine
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: concept-article
 contributors:
@@ -33149,10 +33147,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Using the Model Context Protocol server with Test Engine
+# Using the Model Context Protocol server with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Power Apps Test Engine includes a Model Context Protocol (MCP) server implementation that enhances test creation through deterministic analysis of your applications. This guide explains how to use this capability to generate more accurate, contextually relevant tests.
 
@@ -33314,22 +33311,21 @@ If you encounter issues with the MCP server, try these troubleshooting steps:
 ## FILE: src/power-platform/power-platform/test-engine/ai-overview.md
 
 ---
-title: Generative AI capabilities in Power Apps Test Engine (preview)
+title: Generative AI capabilities in Power Apps Test Engine (deprecated)
 description: Overview of Generative AI features in Power Apps Test Engine, including authoring assistance, Model Context Protocol, and nondeterministic AI testing
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: overview
 contributors:
  - grant-archibald-ms
 ---
 
-# Generative AI capabilities in Power Apps Test Engine (preview)
+# Generative AI capabilities in Power Apps Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Power Apps Test Engine offers comprehensive generative AI capabilities that span the entire testing lifecycle. This page provides an overview of how generative AI can enhance your testing experience, from test creation to execution and validation.
 
@@ -33420,12 +33416,12 @@ For optimal results, consider these guidelines:
 ## FILE: src/power-platform/power-platform/test-engine/alm.md
 
 ---
-title: ALM in Power Platform with Test Engine (preview)
+title: ALM in Power Platform with Test Engine (deprecated)
 description: Learn how to integrate automated testing into your Application Lifecycle Management (ALM) with Test Engine
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/15/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -33433,10 +33429,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# ALM in Power Platform with Test Engine (preview)
+# ALM in Power Platform with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Application Lifecycle Management (ALM) is a comprehensive approach to managing the lifecycle of applications from initial concept through development, testing, deployment, and ongoing maintenance. In the context of Power Platform, incorporating automated testing with Test Engine into your ALM process ensures that applications are thoroughly tested at each stage of development, resulting in higher quality releases.
 
@@ -33831,12 +33826,12 @@ jobs:
 ## FILE: src/power-platform/power-platform/test-engine/authentication-guide.md
 
 ---
-title: "Authentication Guide for Power Apps Test Engine (preview)"
+title: "Authentication Guide for Power Apps Test Engine (deprecated)"
 description: "Step-by-step guide for setting up authentication in Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -33844,10 +33839,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Authentication guide for Power Apps Test Engine (preview)
+# Authentication guide for Power Apps Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 This guide provides step-by-step instructions for setting up authentication in Test Engine. For a quick overview of authentication options, see [Authentication in Test Engine](./authentication.md).
 
@@ -34118,22 +34112,21 @@ This section contains information about troubleshooting authentication with Test
 ## FILE: src/power-platform/power-platform/test-engine/authentication-security.md
 
 ---
-title: "Authentication security architecture in Test Engine (preview)"
+title: "Authentication security architecture in Test Engine (deprecated)"
 description: "Technical overview of authentication security implementation in Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - grant-archibald-ms
 ---
 
-# Authentication security architecture in Test Engine (preview)
+# Authentication security architecture in Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 This technical document outlines the security architecture of the authentication mechanisms in Power Apps Test Engine. For user-focused guidance on selecting and configuring authentication methods, see [Authentication Guide](./authentication-guide.md).
 
@@ -34268,12 +34261,12 @@ Potential future enhancements to the authentication security architecture includ
 ## FILE: src/power-platform/power-platform/test-engine/authentication.md
 
 ---
-title: "Authentication in Power Apps Test Engine (preview)"
+title: "Authentication in Power Apps Test Engine (deprecated)"
 description: "Simple guide to authentication options in Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -34281,10 +34274,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Authentication in Power Apps Test Engine (preview)
+# Authentication in Power Apps Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Test Engine offers straightforward authentication options to support both development and production scenarios. This article provides a clear overview of your authentication choices and how to select the best option for your needs.
 
@@ -34385,12 +34377,12 @@ Choose the path that's right for you:
 ## FILE: src/power-platform/power-platform/test-engine/canvas-application.md
 
 ---
-title: "Test canvas applications with Test Engine (preview)"
+title: "Test canvas applications with Test Engine (deprecated)"
 description: "Learn how to test Power Apps Canvas applications using Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -34398,10 +34390,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Test canvas applications with Test Engine (preview)
+# Test canvas applications with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Testing canvas apps with [Test Engine](./overview.md) requires the following steps:
 
@@ -34416,7 +34407,7 @@ Test plans are defined using [YAML](https://yaml.org/spec/1.2.2/) format. You ca
 
 ### Author your own test plan
 
-Create a yaml file using the test plan schema explained in [Power Apps Test Engine YAML format (preview)](yaml.md).
+Create a yaml file using the test plan schema explained in [Power Apps Test Engine YAML format (deprecated)](yaml.md).
 
 When choosing authoring your own test plan, you can take advantage of the following features:
 
@@ -34534,22 +34525,21 @@ When the tests complete, you can view the results of your test in the `.trx` fil
 ## FILE: src/power-platform/power-platform/test-engine/dataverse.md
 
 ---
-title: "Test Dataverse extensions with Test Engine (preview)"
+title: "Test Dataverse extensions with Test Engine (deprecated)"
 description: "Describes how to perform integration testing of Dataverse extensions with Test Engine."
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/27/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Test Dataverse extensions with Test Engine (preview)
+# Test Dataverse extensions with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 This article explains how to create integration tests with Dataverse. This functionality applies the Power Fx capability to connect with Dataverse tables.
 
@@ -34662,21 +34652,20 @@ Assert("Paris" = Preview.AIExecutePrompt("Country Capital", { Country: "France" 
 ## FILE: src/power-platform/power-platform/test-engine/extensibility.md
 
 ---
-title: "Test Engine extensibility (preview)"
+title: "Test Engine extensibility (deprecated)"
 description: Understanding the extensibility model for Test Engine and the role of Microsoft-signed components
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - grant-archibald-ms
 ---
-# Test Engine extensibility (preview)
+# Test Engine extensibility (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 ## Overview
 
@@ -34841,12 +34830,12 @@ The extensibility model provides significant benefits:
 ## FILE: src/power-platform/power-platform/test-engine/feature-lifecycle.md
 
 ---
-title: "Test Engine feature lifecycle (preview)"
+title: "Test Engine feature lifecycle (deprecated)"
 description: "Describes how Test Engine features progress from open source to preview to general availability"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -34854,10 +34843,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Test Engine feature lifecycle (preview)
+# Test Engine feature lifecycle (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Test Engine has a structured feature lifecycle model to manage the progression of features from experimental concepts to generally available capabilities. This approach allows users to access new functionality at different maturity levels while ensuring reliability and stability for production scenarios.
 
@@ -34976,22 +34964,21 @@ For Test Engine users, this model offers several advantages:
 ## FILE: src/power-platform/power-platform/test-engine/features.md
 
 ---
-title: Power Apps Test Engine features (preview)
+title: Power Apps Test Engine features (deprecated)
 description: Summary of Power Apps Test Engine features.
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Power Apps Test Engine features (preview)
+# Power Apps Test Engine features (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Power Apps Test Engine provides a comprehensive set of features for effectively testing Power Platform solutions. This page details the capabilities available to help you build robust test suites for your Power Platform applications.
 
@@ -35243,22 +35230,21 @@ Future enhancements include an AI Evaluator for the AI Builder SDK and expanded 
 ## FILE: src/power-platform/power-platform/test-engine/filerestrictions.md
 
 ---
-title: "File access restrictions for Test Engine (preview)"
+title: "File access restrictions for Test Engine (deprecated)"
 description: "Learn about the file restrictions for Test Engine in different operating systems"
 author: snamilikonda
 ms.author: snamilikonda
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: reference
 contributors:
 - grant-archibald-ms
 ---
 
-# File access restrictions for Test Engine (preview)
+# File access restrictions for Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 The test engine is allowed to write files exclusively within designated directories under the `Microsoft/TestEngine` folder located in the temporary directory.
 
@@ -35284,22 +35270,21 @@ Note: `%SystemDrive%` is assumed for all of the following paths.
 ## FILE: src/power-platform/power-platform/test-engine/migration-guide.md
 
 ---
-title: "Test command migration process for Test Engine (preview)"
+title: "Test command migration process for Test Engine (deprecated)"
 description: "Learn about the process of transitioning Test command between versions of Test Engine"
 author: snamilikonda
 ms.author: snamilikonda
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
  - grant-archibald-ms
 ---
 
-# Migration Guide (preview)
+# Migration Guide (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 ## Overview
 
@@ -35329,8 +35314,8 @@ Consider the following changes to migrate:
 ## Other Resources
 
 [Power Apps Test Engine release notes](https://github.com/microsoft/PowerApps-TestEngine/releases)  
-[Power Apps Test Engine YAML format (preview)](yaml.md)  
-[Power Apps Test Engine Power Fx functions (preview)](powerfx.md)
+[Power Apps Test Engine YAML format (deprecated)](yaml.md)  
+[Power Apps Test Engine Power Fx functions (deprecated)](powerfx.md)
 
 
 
@@ -35339,12 +35324,12 @@ Consider the following changes to migrate:
 ## FILE: src/power-platform/power-platform/test-engine/model-driven-application.md
 
 ---
-title: "Test model-driven applications with Test Engine (preview)"
+title: "Test model-driven applications with Test Engine (deprecated)"
 description: "Explains how to test a Power Apps Model Driven application using Test Engine."
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/27/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -35352,10 +35337,9 @@ contributors:
  - grant-archibald-ms 
 ---
 
-# Test model-driven applications with Test Engine (preview)
+# Test model-driven applications with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Testing your model-driven application with [Test Engine](./overview.md) requires the following steps:
 
@@ -35366,7 +35350,7 @@ Testing your model-driven application with [Test Engine](./overview.md) requires
 
 ## Create a test plan
 
-Create a yaml file using the test plan schema explained in [Power Apps Test Engine YAML format (preview)](yaml.md).
+Create a yaml file using the test plan schema explained in [Power Apps Test Engine YAML format (deprecated)](yaml.md).
 
 > [!TIP]
 > Review [available sample](samples.md#available-samples) plans in the GitHub repository.
@@ -35488,19 +35472,21 @@ When the tests complete, you can view the results of your test in the `.trx` fil
 ## FILE: src/power-platform/power-platform/test-engine/module-functions-reference.md
 
 ---
-title: Test Engine module functions reference (preview)
+title: Test Engine module functions reference (deprecated)
 description: Find available test engine module functions you can use.
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: reference
 contributors:
 - grant-archibald-ms
 ---
 
-# Test Engine module functions reference (preview)
+# Test Engine module functions reference (deprecated)
+
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 This table provides an overview of the various modules available in the Power Apps Test Engine and their specialized functions.
 
@@ -35550,22 +35536,21 @@ If you would like to develop more modules and functions for Test Engine, refer t
 ## FILE: src/power-platform/power-platform/test-engine/overview.md
 
 ---
-title: Power Apps Test Engine overview (preview)
+title: Power Apps Test Engine overview (deprecated)
 description: Learn about how you can automate tests of standalone canvas apps using the Power Apps Test Engine within Power Platform CLI.
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Power Apps Test Engine overview (preview)
+# Power Apps Test Engine overview (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Power Apps Test Engine is a testing solution designed specifically for Power Platform applications. Whether you're new to automated testing, familiar with [Test Studio](/power-apps/maker/canvas-apps/test-studio), or an experienced developer with [Playwright](https://playwright.dev/) knowledge, Test Engine offers a scalable approach to testing that aligns with the low-code philosophy of Power Platform.
 
@@ -35759,22 +35744,21 @@ The Test Engine works with the following browsers:
 ## FILE: src/power-platform/power-platform/test-engine/playwright.md
 
 ---
-title: Test Engine and Playwright Integration (preview)
+title: Test Engine and Playwright Integration (deprecated)
 description: Learn how Test Engine applies Playwright to provide robust browser automation capabilities.
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Test Engine and Playwright integration (preview)
+# Test Engine and Playwright integration (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 ## Overview
 
@@ -35988,22 +35972,21 @@ When working with Test Engine's Playwright integration:
 ## FILE: src/power-platform/power-platform/test-engine/powerfx-csharp.md
 
 ---
-title: "Create a C# Power Fx test function (preview)"
+title: "Create a C# Power Fx test function (deprecated)"
 description: "Describes the creating Power Fx functions using C# in Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Create a C# Power Fx test function (preview)
+# Create a C# Power Fx test function (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 [Microsoft Power Fx](../power-fx/overview.md) is a powerful low-code language used in Power Apps, and it can be extended using C# to create custom test functions. This article explains how to create a C# Power Fx test function, providing a seamless experience for both makers and developers.
 
@@ -36143,22 +36126,21 @@ namespace testengine.module
 ## FILE: src/power-platform/power-platform/test-engine/powerfx-functions.md
 
 ---
-title: "Power Apps Test Engine Power Fx Functions (preview)"
+title: "Power Apps Test Engine Power Fx Functions (deprecated)"
 description: "Describes Power Fx functions you can use with Power Apps Test Engine."
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/27/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Power Apps Test Engine Power Fx Functions (preview)
+# Power Apps Test Engine Power Fx Functions (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Test engine uses these existing PowerFx functions:
 
@@ -36421,7 +36403,7 @@ Preview.SimulateDataverse({
 
 ### Related articles
 
-[Dataverse and Connector Simulation with Test Engine (preview)](simulation.md)
+[Dataverse and Connector Simulation with Test Engine (deprecated)](simulation.md)
 
 [!INCLUDE [footer-banner](../includes/footer-banner.md)]
 
@@ -36432,12 +36414,12 @@ Preview.SimulateDataverse({
 ## FILE: src/power-platform/power-platform/test-engine/powerfx-namespaces.md
 
 ---
-title: "Use Power Fx namespaces in testing (preview)"
+title: "Use Power Fx namespaces in testing (deprecated)"
 description: "Describes the Power Fx namespaces used in Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -36445,10 +36427,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Use Power Fx namespaces in testing (preview)
+# Use Power Fx namespaces in testing (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Power Fx namespaces are a powerful feature that allows developers to organize and separate different sets of functions within the Power Fx language. By using namespaces, you can distinguish between the default functions provided by Power Fx, such as [CountRows](../power-fx/reference/function-table-counts.md), and extensions added for specific purposes, like the Test Engine with functions such as [Preview.Pause](powerfx-functions.md#previewpause). This separation helps in maintaining clarity and avoiding conflicts between different sets of features.
 
@@ -36490,22 +36471,21 @@ testSettings:
 ## FILE: src/power-platform/power-platform/test-engine/powerfx.md
 
 ---
-title: "Power Apps Test Engine Power Fx (preview)"
+title: "Power Apps Test Engine Power Fx (deprecated)"
 description: "Describes Power Fx you can use with Power Apps Test Engine."
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Power Apps Test Engine Power Fx (preview)
+# Power Apps Test Engine Power Fx (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 > 
 > You can make use of [Learning Playground](https://microsoft.github.io/PowerApps-TestEngine/learning/playground/) to get hands on and try the functions documented in this guide.
 
@@ -36613,12 +36593,12 @@ Use these functions in your test cases to perform specific actions or retrieve d
 ## FILE: src/power-platform/power-platform/test-engine/providers.md
 
 ---
-title: "Understanding Test Engine providers (preview)"
+title: "Understanding Test Engine providers (deprecated)"
 description: "Comprehensive explanation of providers in Power Apps Test Engine"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -36626,7 +36606,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Understanding Test Engine providers (preview)
+# Understanding Test Engine providers (deprecated)
+
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Test Engine uses a provider-based architecture that allows it to support testing across different application types. Each provider is optimized for a specific application type, allowing for efficient test automation while providing a consistent testing experience.
 
@@ -36789,13 +36771,13 @@ Select a provider based on your application type and testing requirements:
 ## FILE: src/power-platform/power-platform/test-engine/samples.md
 
 ---
-title: Power Apps Test Engine Samples (preview)
+title: Power Apps Test Engine Samples (deprecated)
 description: Examples and sample tests for Power Apps Test Engine
 # Update samples.md that reads all the folders from https://github.com/microsoft/PowerApps-TestEngine/tree/main/samples and uses any readme.md to summarize the sample. Generate samples as table with link to the sample and a second column with the description
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -36804,8 +36786,7 @@ contributors:
 
 # Power Apps Test Engine samples
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 This page provides an overview of the sample projects available in the Power Apps Test Engine repository. These samples demonstrate various testing capabilities and scenarios to help you understand how to create effective tests for your Power Platform solutions.
 
@@ -36910,22 +36891,21 @@ The samples provide excellent learning resources:
 ## FILE: src/power-platform/power-platform/test-engine/simulation.md
 
 ---
-title: "Dataverse and Connector Simulation with Test Engine (preview)"
+title: "Dataverse and Connector Simulation with Test Engine (deprecated)"
 description: "Discusses the ability to simulate interaction with Dataverse and Connectors using Power Fx functions"
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/19/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
 - grant-archibald-ms
 ---
 
-# Dataverse and connector simulation with Test Engine (preview)
+# Dataverse and connector simulation with Test Engine (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 The ability to simulate interaction with Dataverse and Power Platform connectors can play an important role in testing your low code apps by allowing you to define test scenarios without the need for actual data.
 
@@ -36983,12 +36963,12 @@ This function simulates a connector call to the `Office365Groups` connector when
 ## FILE: src/power-platform/power-platform/test-engine/yaml.md
 
 ---
-title: "Power Apps Test Engine YAML format (preview)"
+title: "Power Apps Test Engine YAML format (deprecated)"
 description: Describes the YAML format for test following the same guidelines as Power Fx.
 author: caburk
 ms.author: caburk
 ms.subservice: test-engine
-ms.date: 05/27/2025
+ms.date: 04/17/2026
 ms.reviewer: jdaly
 ms.topic: reference
 contributors:
@@ -36998,10 +36978,9 @@ contributors:
  - grant-archibald-ms
 ---
 
-# Power Apps Test Engine YAML format (preview)
+# Power Apps Test Engine YAML format (deprecated)
 
-> [!NOTE]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+[!INCLUDE [guidance-deprecate-test-engine](../includes/guidance-deprecate-test-engine.md)]
 
 Tests are defined in YAML following the same guidelines as Power Fx does. [Learn more about the Power Fx YAML formula grammar](../power-fx/yaml-formula-grammar.md).
 
@@ -37240,8 +37219,8 @@ $env:user1Email = "someone@example.com"
 
 ### See also
 
-[Power Apps Test Engine overview (preview)](overview.md)  
-[Power Apps Test Engine Power Fx functions (preview)](powerfx.md)  
+[Power Apps Test Engine overview (deprecated)](overview.md)  
+[Power Apps Test Engine Power Fx functions (deprecated)](powerfx.md)  
 
 [!INCLUDE [footer-banner](../includes/footer-banner.md)]
 
